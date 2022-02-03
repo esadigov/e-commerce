@@ -1,7 +1,7 @@
 import React from 'react';
 import { CollectionPreview } from '../../components/CollectionPreview';
 
-import { SHOP_DATA, IShopData } from '../../data/shop-collections';
+import { SHOP_DATA, IShopData } from '../../mock/data/shop-collections';
 
 export const ShopPage = () => {
   const [shopData, setShopData] = React.useState<IShopData[]>(SHOP_DATA);

@@ -54,6 +54,7 @@ module.exports = {
     'import/no-unresolved': 'off',
     'no-unused-vars': 'off',
     'jsx-a11y/label-has-associated-control': 'off',
+    'import/no-extraneous-dependencies': 'off',
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': ['error'],
     'import/extensions': [

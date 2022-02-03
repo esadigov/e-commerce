@@ -1,5 +1,5 @@
 import React from 'react';
-import { getCollections, IItem } from '../../services/directory-service/directory.service';
+import { getCollections, IItem } from '../../core/services/directory-service/directory.service';
 import { MenuCard } from '../MenuCard';
 
 import './directory.scss';

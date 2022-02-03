@@ -7,8 +7,11 @@ import { ShopPage } from './pages/shop-page';
 import './App.scss';
 import { Header } from './components/Header';
 import { HTTP } from './http-client';
+import { getApi } from './core/config/config';
 
-HTTP.createClient('api');
+HTTP.createClient(getApi().api);
+
+// qruppiruy module/domen
 
 const App = () => (
   <div className="App">

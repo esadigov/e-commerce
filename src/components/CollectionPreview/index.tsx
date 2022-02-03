@@ -1,5 +1,5 @@
 import React from 'react';
-import { IItem } from '../../data/shop-collections';
+import { IItem } from '../../mock/data/shop-collections';
 import { CollectionItem } from '../CollectionItem';
 
 import './collection-preview.scss';
