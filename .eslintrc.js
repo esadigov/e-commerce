@@ -55,6 +55,7 @@ module.exports = {
     'no-unused-vars': 'off',
     'jsx-a11y/label-has-associated-control': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'react/button-has-type': 'off',
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': ['error'],
     'import/extensions': [
