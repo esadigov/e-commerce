@@ -1,9 +1,15 @@
 .sign-up {
   display: flex;
   flex-direction: column;
-  width: 380px;
+  width: 30vw;
 
   .title {
     margin: 10px 0;
   }
+}
+
+.no-account {
+  margin-left: 15px;
+  text-decoration: underline;
+  cursor: pointer;
 }
