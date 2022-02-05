@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Header } from './components/Header';
-import { HTTP } from './http-client';
+import { HTTP } from './core/http-client';
 import { getApi } from './core/config/config';
 
 import './App.scss';

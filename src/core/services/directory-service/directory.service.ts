@@ -1,4 +1,4 @@
-import { HTTP } from '../../../http-client/index';
+import { HTTP } from '../../http-client/index';
 
 export interface IItem{
   id: number;
