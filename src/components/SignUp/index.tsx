@@ -1,6 +1,8 @@
 import React from 'react';
-import { useAppDispatch } from '../../core/redux/hooks';
-import { AUTH_PAGE, toggle } from '../../core/redux/reducers/auth.slice';
+import { useAppDispatch, useAppSelector } from '../../core/redux/hooks';
+import {
+  AUTH_PAGE, IRegisterFields, toggle, updateRegisterField,
+} from '../../core/redux/reducers/auth.slice';
 import { CustomButton } from '../CustomButton';
 import { FormInput } from '../FormInput';
 
@@ -8,6 +10,14 @@ import './sign-up.scss';
 
 export const SignUp = () => {
   const dispatch = useAppDispatch();
+  const fields = useAppSelector((state) => state.auth.register_fields);
+
+  const handleChange = (
+    e: React.ChangeEvent<{ value: unknown }>,
+    field: keyof IRegisterFields,
+  ) => {
+    dispatch(updateRegisterField({ field, value: e.target.value as string }));
+  };
 
   return (
     <div className="sign-up">
@@ -17,32 +27,32 @@ export const SignUp = () => {
         <FormInput
           type="text"
           name="displayName"
-          value=""
-          onChange={() => {}}
+          value={fields.displayName}
+          onChange={(e) => handleChange(e, 'displayName')}
           label="Display Name"
           required
         />
         <FormInput
           type="email"
           name="email"
-          value=""
-          onChange={() => {}}
+          value={fields.email}
+          onChange={(e) => handleChange(e, 'email')}
           label="Email"
           required
         />
         <FormInput
           type="password"
           name="password"
-          value=""
-          onChange={() => {}}
+          value={fields.password}
+          onChange={(e) => handleChange(e, 'password')}
           label="Password"
           required
         />
         <FormInput
           type="password"
           name="confirmPassword"
-          value=""
-          onChange={() => {}}
+          value={fields.confirmPassword}
+          onChange={(e) => handleChange(e, 'confirmPassword')}
           label="Confirm Password"
           required
         />
