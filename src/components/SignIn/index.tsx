@@ -4,13 +4,12 @@ import { CustomButton } from '../CustomButton';
 import { FormInput } from '../FormInput';
 
 import {
-  AUTH_PAGE,
-  ILoginFields,
   toggle,
   updateLoginField,
-} from '../../core/redux/reducers/auth.slice';
+} from '../../core/redux/reducers/auth/auth.slice';
 
 import './sign-in.scss';
+import { AUTH_PAGE, ILoginFields } from '../../core/redux/reducers/auth/const';
 
 export const SignIn = () => {
   const dispatch = useAppDispatch();

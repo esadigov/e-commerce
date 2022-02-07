@@ -1,8 +1,10 @@
 import React from 'react';
 import { useAppDispatch, useAppSelector } from '../../core/redux/hooks';
 import {
-  AUTH_PAGE, IRegisterFields, toggle, updateRegisterField,
-} from '../../core/redux/reducers/auth.slice';
+  toggle,
+  updateRegisterField,
+} from '../../core/redux/reducers/auth/auth.slice';
+import { AUTH_PAGE, IRegisterFields } from '../../core/redux/reducers/auth/const';
 import { CustomButton } from '../CustomButton';
 import { FormInput } from '../FormInput';
 

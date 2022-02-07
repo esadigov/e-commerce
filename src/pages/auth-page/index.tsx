@@ -3,7 +3,7 @@ import { SignIn } from '../../components/SignIn';
 import { SignUp } from '../../components/SignUp';
 
 import { useAppSelector } from '../../core/redux/hooks';
-import { AUTH_PAGE } from '../../core/redux/reducers/auth.slice';
+import { AUTH_PAGE } from '../../core/redux/reducers/auth/const';
 
 import './auth-page.scss';
 
