@@ -5,6 +5,7 @@ import {
   updateRegisterField,
 } from '../../core/redux/reducers/auth/auth.slice';
 import { AUTH_PAGE, IRegisterFields } from '../../core/redux/reducers/auth/const';
+import { register } from '../../core/services/directory-service/directory.service';
 import { CustomButton } from '../CustomButton';
 import { FormInput } from '../FormInput';
 
@@ -20,6 +21,17 @@ export const SignUp = () => {
   ) => {
     dispatch(updateRegisterField({ field, value: e.target.value as string }));
   };
+
+  const handleSubmit = React.useCallback(
+    async (data) => {
+      const res = await register(data);
+
+      if (res.status === 201) return true;
+
+      return false;
+    },
+    [register],
+  );
 
   return (
     <div className="sign-up">
@@ -58,7 +70,7 @@ export const SignUp = () => {
           label="Confirm Password"
           required
         />
-        <CustomButton type="submit">SIGN UP</CustomButton>
+        <CustomButton type="button" onClick={() => handleSubmit(fields)}>SIGN UP</CustomButton>
         <span
           className="no-account"
           role="none"

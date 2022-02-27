@@ -14,6 +14,8 @@ export const Directory: React.FC = () => {
       if (fetchedCollections) { setCollections(fetchedCollections); }
     };
 
+    console.log(collections);
+
     fetchCollection();
   }, []);
 
